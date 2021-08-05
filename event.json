@@ -1,0 +1,34 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://myawesomecompany.net/schemas/event.json",
+  "title": "Base event object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "description": "Event unique name",
+      "pattern": "^[a-z0-9_]{3,50}$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Event type",
+      "enum": [
+        "business",
+        "ui",
+        "info"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "description": "Event specific data"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name"
+  ]
+}

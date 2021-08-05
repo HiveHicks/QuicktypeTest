@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://myawesomecompany.net/schemas/events/event2.json",
+  "title": "Event 2",
+  "allOf": [
+    {
+      "$ref": "https://myawesomecompany.net/schemas/event.json"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "event2"
+        },
+        "type": {
+          "const": "info"
+        }
+      }
+    }
+  ]
+}
